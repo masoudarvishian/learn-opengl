@@ -7,7 +7,7 @@ void set_framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processTheInput(GLFWwindow*);
 void displayMessage(std::string);
 
-int main() {
+int main_() {
 
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
