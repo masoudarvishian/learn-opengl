@@ -1,11 +1,9 @@
 #include <iostream>
-
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
+void logMessage(std::string  msg);
 void set_framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processTheInput(GLFWwindow*);
-void displayMessage(std::string);
 
 int main() {
 
@@ -14,13 +12,13 @@ int main() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-#ifdef __APPLE__
+#if __APPLE__
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif 
+#endif
 
-	GLFWwindow* window = glfwCreateWindow(600, 400, "Learn OpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(600, 500, "LearnOpenGL", NULL, NULL);
 	if (window == NULL) {
-		displayMessage("Failed to create window!");
+		logMessage("Failed to create the window!");
 		glfwTerminate();
 		return -1;
 	}
@@ -29,73 +27,69 @@ int main() {
 	glfwSetFramebufferSizeCallback(window, set_framebuffer_size_callback);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		displayMessage("Failed to initialize glad!");
-
+		logMessage("Failed to init glad");
+		glfwTerminate();
 		return -1;
 	}
 
 	const char* vertexShaderSource =
-		"#version 330 core\n"
-		"layout (location = 0) in vec3 aPos;\n"
-		"void main()\n"
-		"{\n"
-		"    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);\n"
-		"}\0";
+	"#version 330 core\n"
+	"layout(location = 0) in vec3 aPos;\n"
+	"void main() {\n"
+	"	gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);\n"
+	"}\n";
 
 	const char* fragmentShaderSource =
-		"#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"void main()\n"
-		"{\n"
-		"    FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-		"}\0";
+	"#version 330 core\n"
+	"out vec4 FragColor;\n"
+	"void main() {\n"
+	"	FragColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);\n"
+	"}\n";
 
-	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
 
-	GLint success;
-	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-
+	int success;
 	char infoLog[512];
+	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+		logMessage(infoLog);
 	}
 
-	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 	glCompileShader(fragmentShader);
 	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-
 	if (!success) {
 		glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+		logMessage(infoLog);
 	}
 
-	GLuint shaderProgram = glCreateProgram();
+	unsigned int shaderProgram = glCreateProgram();
 	glAttachShader(shaderProgram, vertexShader);
 	glAttachShader(shaderProgram, fragmentShader);
 	glLinkProgram(shaderProgram);
 	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-
 	if (!success) {
 		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER_PROGRAM::LINK_FAILED\n" << infoLog << std::endl;
+		logMessage(infoLog);
 	}
 
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
 
 	float vertices[] = {
-		0.5f,  0.5f, 0.0f,  // top right
-		0.5f, -0.5f, 0.0f,  // bottom right
-	   -0.5f, -0.5f, 0.0f,  // bottom left
-	   -0.5f,  0.5f, 0.0f   // top left 
+		-0.5f, -0.5f, 0.0f, // bottom left
+		-0.5f,  0.5f, 0.0f, // top left
+		 0.5f,  0.5f, 0.0f, // top right
+		 0.5f, -0.5f, 0.0f, // bottom right
 	};
-	unsigned int indices[] = {  // note that we start from 0!
-		0, 1, 3,  // first Triangle
-		1, 2, 3   // second Triangle
+
+	unsigned int indices[] = {
+		0, 1, 2,
+		0, 2, 3
 	};
 
 	unsigned int VAO, VBO, EBO;
@@ -118,11 +112,14 @@ int main() {
 	glBindVertexArray(0);
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	
-	while (!glfwWindowShouldClose(window)) {
-		processTheInput(window);
 
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	while (!glfwWindowShouldClose(window)) {
+
+		if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+			glfwSetWindowShouldClose(window, GL_TRUE);
+		}
+
+		glClearColor(0.2f, 0.1f, 0.4f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glUseProgram(shaderProgram);
@@ -133,23 +130,18 @@ int main() {
 		glfwPollEvents();
 	}
 
-	// optional: de-allocate all resources once they've outlived their purpose
+	glDeleteProgram(shaderProgram);
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
-	glDeleteProgram(shaderProgram);
 
 	glfwTerminate();
+
 	return 0;
 }
 
-void displayMessage(std::string msg) {
+void logMessage(std::string  msg) {
 	std::cout << msg << std::endl;
-}
-
-void processTheInput(GLFWwindow* window) {
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GL_TRUE);
 }
 
 void set_framebuffer_size_callback(GLFWwindow* window, int width, int height) {
