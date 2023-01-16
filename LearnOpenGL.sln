@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloTriangle", "HelloTrian
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shaders", "Shaders\Shaders.vcxproj", "{89DD241D-0E22-48E1-8DC7-D0AB4CCC806C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Textures", "Textures\Textures.vcxproj", "{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{89DD241D-0E22-48E1-8DC7-D0AB4CCC806C}.Release|x64.Build.0 = Release|x64
 		{89DD241D-0E22-48E1-8DC7-D0AB4CCC806C}.Release|x86.ActiveCfg = Release|Win32
 		{89DD241D-0E22-48E1-8DC7-D0AB4CCC806C}.Release|x86.Build.0 = Release|Win32
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Debug|x64.ActiveCfg = Debug|x64
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Debug|x64.Build.0 = Debug|x64
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Debug|x86.ActiveCfg = Debug|Win32
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Debug|x86.Build.0 = Debug|Win32
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Release|x64.ActiveCfg = Release|x64
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Release|x64.Build.0 = Release|x64
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Release|x86.ActiveCfg = Release|Win32
+		{FEE60ADD-EF8E-40B3-939F-A1CAD3FEE8D1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
