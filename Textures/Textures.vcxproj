@@ -144,10 +144,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="4.1.texture.fs" />
-    <None Include="4.1.texture.vs" />
+    <None Include="4.2.texture.fs" />
+    <None Include="4.2.texture.vs" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="awesomeface.png" />
     <Image Include="container.jpg" />
     <Image Include="wall.jpg" />
   </ItemGroup>

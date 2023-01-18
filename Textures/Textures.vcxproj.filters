@@ -46,14 +46,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="4.1.texture.fs" />
-    <None Include="4.1.texture.vs" />
+    <None Include="4.2.texture.fs" />
+    <None Include="4.2.texture.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="wall.jpg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="awesomeface.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
