@@ -142,10 +142,13 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_practice.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="4.2.texture.fs" />
     <None Include="4.2.texture.vs" />
+    <None Include="myFragmentSh.fs" />
+    <None Include="myVertexSh.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="awesomeface.png" />
