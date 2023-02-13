@@ -1300,8 +1300,8 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="5.1.transform.fs" />
-    <None Include="5.1.transform.vs" />
+    <None Include="5.1.transform.fsh" />
+    <None Include="5.1.transform.vsh" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="dependencies\lib\glfw3.lib" />
