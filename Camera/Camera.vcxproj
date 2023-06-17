@@ -424,8 +424,8 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="5.1.transform.fs" />
-    <None Include="5.1.transform.vs" />
+    <None Include="7.1.camera.fs" />
+    <None Include="7.1.camera.vs" />
     <None Include="dependencies\include\glm\detail\func_common.inl" />
     <None Include="dependencies\include\glm\detail\func_common_simd.inl" />
     <None Include="dependencies\include\glm\detail\func_exponential.inl" />
@@ -564,9 +564,9 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="awesomeface.png" />
-    <Image Include="container.jpg" />
-    <Image Include="wall.jpg" />
+    <Image Include="resources\textures\awesomeface.png" />
+    <Image Include="resources\textures\container.jpg" />
+    <Image Include="resources\textures\wall.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="dependencies\lib\glfw3.lib" />

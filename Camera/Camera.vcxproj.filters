@@ -1300,17 +1300,17 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="5.1.transform.fs" />
-    <None Include="5.1.transform.vs" />
+    <None Include="7.1.camera.fs" />
+    <None Include="7.1.camera.vs" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="awesomeface.png">
+    <Image Include="resources\textures\awesomeface.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="container.jpg">
+    <Image Include="resources\textures\container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="wall.jpg">
+    <Image Include="resources\textures\wall.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
