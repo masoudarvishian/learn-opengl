@@ -1300,8 +1300,8 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="7.1.camera.fs" />
-    <None Include="7.1.camera.vs" />
+    <None Include="7.3.camera.fs" />
+    <None Include="7.3.camera.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\awesomeface.png">

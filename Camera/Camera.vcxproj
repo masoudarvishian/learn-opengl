@@ -424,8 +424,8 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="7.1.camera.fs" />
-    <None Include="7.1.camera.vs" />
+    <None Include="7.3.camera.fs" />
+    <None Include="7.3.camera.vs" />
     <None Include="dependencies\include\glm\detail\func_common.inl" />
     <None Include="dependencies\include\glm\detail\func_common_simd.inl" />
     <None Include="dependencies\include\glm\detail\func_exponential.inl" />
