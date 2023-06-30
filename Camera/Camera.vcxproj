@@ -134,6 +134,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="dependencies\include\glad\glad.h" />
     <ClInclude Include="dependencies\include\GLFW\glfw3.h" />
     <ClInclude Include="dependencies\include\GLFW\glfw3native.h" />
@@ -424,8 +425,8 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="7.3.camera.fs" />
-    <None Include="7.3.camera.vs" />
+    <None Include="7.4.camera.fs" />
+    <None Include="7.4.camera.vs" />
     <None Include="dependencies\include\glm\detail\func_common.inl" />
     <None Include="dependencies\include\glm\detail\func_common_simd.inl" />
     <None Include="dependencies\include\glm\detail\func_exponential.inl" />

@@ -890,6 +890,9 @@
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="dependencies\include\glm\detail\func_common.inl">
@@ -1300,8 +1303,8 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="7.3.camera.fs" />
-    <None Include="7.3.camera.vs" />
+    <None Include="7.4.camera.fs" />
+    <None Include="7.4.camera.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\textures\awesomeface.png">
