@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoordinateSystem", "Coordin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Camera", "Camera\Camera.vcxproj", "{80897993-C6D1-4613-A15A-45FB2F72886F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Colors", "Colors\Colors.vcxproj", "{19DEF752-DCCC-47EC-B376-BBD150F301A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{80897993-C6D1-4613-A15A-45FB2F72886F}.Release|x64.Build.0 = Release|x64
 		{80897993-C6D1-4613-A15A-45FB2F72886F}.Release|x86.ActiveCfg = Release|Win32
 		{80897993-C6D1-4613-A15A-45FB2F72886F}.Release|x86.Build.0 = Release|Win32
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Debug|x64.ActiveCfg = Debug|x64
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Debug|x64.Build.0 = Debug|x64
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Debug|x86.ActiveCfg = Debug|Win32
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Debug|x86.Build.0 = Debug|Win32
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Release|x64.ActiveCfg = Release|x64
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Release|x64.Build.0 = Release|x64
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Release|x86.ActiveCfg = Release|Win32
+		{19DEF752-DCCC-47EC-B376-BBD150F301A7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
