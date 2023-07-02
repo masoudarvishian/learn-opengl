@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="7.4.camera.fs" />
-    <None Include="7.4.camera.vs" />
+    <None Include="1.colors.fs" />
+    <None Include="1.colors.vs" />
     <None Include="dependencies\include\glm\detail\func_common.inl">
       <Filter>Header Files</Filter>
     </None>
@@ -425,6 +425,8 @@
     <None Include="dependencies\include\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="1.light_cube.vs" />
+    <None Include="1.light_cube.fs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">
